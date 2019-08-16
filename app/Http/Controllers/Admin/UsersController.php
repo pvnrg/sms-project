@@ -151,6 +151,9 @@ class UsersController extends Controller
             $user->cert_of_good_standing=$data['cert_of_good_standing'];
         }
 
+        $token = app('auth.password.broker')->createToken($user);
+        $user->notify(new Signup($user, $token));
+        
         $user->save();
         $user->roles()->attach($role);   
         
