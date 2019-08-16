@@ -8,7 +8,7 @@ use App\User;
 
 use Illuminate\Http\Request;
 use Session;
-
+use App\Notifications\Signup;
 use Illuminate\Support\Facades\File;
 use DataTables;
 use App\FeeSchedules;
