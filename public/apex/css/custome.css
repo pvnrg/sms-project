@@ -1,0 +1,11 @@
+.relative-container{
+	position: relative;
+}
+
+.relative-container .close {
+    position: absolute;
+    top: -15px;
+    right: 2px;
+    z-index: 100;
+	border-radius: 50%;
+}

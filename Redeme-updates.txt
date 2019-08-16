@@ -1,0 +1,17 @@
+mysql -h aws20181.cuml11usydn2.ap-south-1.rds.amazonaws.com -u aws20181 -p
+
+
+8A29320o1!8()*&^
+
+database_name : erpcitrusbug_db
+database_user_name : erpcitrusbug_user
+database_password : erpcitrusbug8932()*&^
+
+
+CREATE DATABASE erpcitrusbug_db;
+CREATE USER erpcitrusbug_user@localhost;
+SET PASSWORD FOR erpcitrusbug_user@localhost= PASSWORD("erpcitrusbug8932()*&^");
+GRANT ALL PRIVILEGES ON erpcitrusbug_db.* TO erpcitrusbug_user@localhost IDENTIFIED BY 'erpcitrusbug8932()*&^';
+GRANT ALL ON erpcitrusbug_db.* to erpcitrusbug_user@'%' IDENTIFIED BY 'erpcitrusbug8932()*&^';
+FLUSH PRIVILEGES;
+
