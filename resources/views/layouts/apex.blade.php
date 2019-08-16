@@ -5,7 +5,7 @@
         <meta name="csrf-token" content="{{ csrf_token() }}">
         <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
         <meta content='text/html;charset=utf-8' http-equiv='content-type'>
-        <meta content='Gesmansys' name='description'>
+        <meta content='SMS' name='description'>
        
         @include('apex.include.cssfiles')
         @stack('css')
