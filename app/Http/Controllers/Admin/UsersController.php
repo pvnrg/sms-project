@@ -96,6 +96,7 @@ class UsersController extends Controller
         $user->first_name=$request->first_name;
         $user->last_name=$request->last_name;
         $user->contact=$request->contact;
+        $user->password=bcrypt(123456);
         $user->email=$request->email;
         $user->address=$request->address;
         $user->tax_from=$request->tax_from;
@@ -151,9 +152,9 @@ class UsersController extends Controller
             $user->cert_of_good_standing=$data['cert_of_good_standing'];
         }
 
-        $token = app('auth.password.broker')->createToken($user);
-        $user->notify(new Signup($user, $token));
-        
+        // $token = app('auth.password.broker')->createToken($user);
+        // $user->notify(new Signup($user, $token));
+
         $user->save();
         $user->roles()->attach($role);   
         
