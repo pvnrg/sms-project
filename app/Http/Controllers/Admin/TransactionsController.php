@@ -162,9 +162,9 @@ class TransactionsController extends Controller
     {
         $transaction = DB::select('select T.*, U.first_name, TY.name as trans_type_name from transactions T left join users U on U.id = T.client_id left join transaction_types TY on TY.id = T.trans_type_id ORDER BY T.created_at DESC');
         // dd($transaction);
-        $transaction = $transaction[0];
+        $transactions = $transaction[0];
         if($transaction) {
-            return view('admin.transactions.show', compact('transaction'));
+            return view('admin.transactions.show', compact('transactions'));
         }else{
             return redirect('admin/transactions');
         }

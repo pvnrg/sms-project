@@ -33,7 +33,7 @@ class UsersController extends Controller
      */
     public function userDatatable(Request $request) {
         $record = User::with('roles');
-        $record = User::with('roles')->where('id', '!=', Auth::id())->except(1)->get();
+        //$record = User::with('roles')->where('id', '!=', Auth::id())->except(1)->get();
         // $record = DB::select('select u.id, u.first_name, r.label from users u inner join role_user ru on u.id = ru.user_id left join roles r on r.id = ru.role_id where r.id NOT IN (1) ORDER BY id DESC');
 
         return Datatables::of($record)->make(true);
@@ -83,10 +83,10 @@ class UsersController extends Controller
                 'account_no' => 'required|unique:users'
             ]);
 
-        // $data = $request->all();
+         //$data = $request->all();
 
-        // print_r($data);
-        // die;
+         //print_r($data);
+         //die;
         // $data['utype'] = "employee";
         $role = Role::where('name',$request->roles)->first();
 
@@ -103,7 +103,7 @@ class UsersController extends Controller
         $user->is_corporate=($request->is_corporate == 'on') ? 1 : 0;
         $user->fees_id=($request->fee_schedules) ? $request->fee_schedules : null;
         $user->client_class_id=$request->client_classes;
-        $user->beneficial_owner_id=$request->beneficial_owner;
+        $user->beneficial_owner_id=1;
 
         if ($request->file('passport')) {
             $fimage = $request->file('passport');

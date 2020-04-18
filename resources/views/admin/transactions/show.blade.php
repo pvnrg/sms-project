@@ -41,11 +41,9 @@
                                             <tr>
 
                                                 <td>@lang('class.label.name')</td>
-                                                <!-- <td> {{ $transactions->name }} </td> -->
+                                                <td> {{ $transactions->first_name }} </td>
                                             </tr>
                                             <tr>
-                                                <!-- <td>@lang('class.label.description')</td> -->
-                                                <!-- <td> {{ $transactions->description }} </td> -->
                                             </tr>
                                             </tbody>
                                         </table>
